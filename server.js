@@ -21,12 +21,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', (req, res) => {
-  res.send('HNG Backend Task 0');
-});
-
 // Routes
-app.use('/me', profileRouter);
+app.use('/', profileRouter);
 
 // Error handling middleware
 app.use(errorHandler);
